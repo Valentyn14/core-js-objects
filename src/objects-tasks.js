@@ -111,14 +111,14 @@ function isEmptyObject(obj) {
  *    console.log(immutableObj) => {a: 1, b: 2}
  */
 function makeImmutable(obj) {
-  Object.keys(obj).forEach((key) => {
-    Object.defineProperty(obj, key, {
-      writable: false,
-      configurable: false,
-    });
-  });
+  // Object.keys(obj).forEach((key) => {
+  //   Object.defineProperty(obj, key, {
+  //     writable: false,
+  //     configurable: false,
+  //   });
+  // });
 
-  return obj;
+  return Object.freeze(obj);
 }
 
 /**
